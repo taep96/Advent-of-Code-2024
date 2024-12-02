@@ -21,7 +21,7 @@ fn main() -> Result<()> {
     let part2_start = Instant::now();
     let part2 = part2(input_2)?;
     let part2_elapsed = part2_start.elapsed();
-    let part2_total = part2_elapsed + part1_total;
+    let part2_total = part2_elapsed + elapsed;
     println!("Part 2 {part2_elapsed:?} (total: {part2_total:?})",);
 
     println!("Results:");
