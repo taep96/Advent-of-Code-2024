@@ -1,6 +1,5 @@
 use anyhow::Result;
 use std::collections::HashMap;
-use std::fs;
 use std::time::Instant;
 
 fn main() -> Result<()> {
@@ -32,7 +31,8 @@ fn main() -> Result<()> {
 }
 
 fn parse_input() -> Result<(Vec<u32>, Vec<u32>)> {
-    let input = fs::read_to_string("inputs/input_1")?;
+    let input = include_str!("../inputs/input_1");
+
     let a = Vec::with_capacity(1000);
     let b = Vec::with_capacity(1000);
 

@@ -1,6 +1,5 @@
 use anyhow::Result;
 use itertools::Itertools;
-use std::fs;
 use std::time::Instant;
 
 fn main() -> Result<()> {
@@ -29,7 +28,7 @@ fn main() -> Result<()> {
 }
 
 fn parse_input() -> Result<Vec<Vec<i32>>> {
-    let input = fs::read_to_string("inputs/input_2")?
+    let input = include_str!("../inputs/input_2")
         .lines()
         .map(|line| {
             line.split_whitespace()
